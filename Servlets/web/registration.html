@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+<h1>Registration Form</h1>
+<hr>
+<form name="form1" method="post" action="/Registration">
+    <table>
+        <tbody>
+        <tr>
+            <td>Username:</td>
+            <td>
+                <label><input type="text" name="username"/></label>
+            </td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td>
+                <label><input type="password" name="password"/></label>
+            </td>
+        </tr>
+        <tr>
+            <td>Sex:</td>
+            <td>
+                <label><input type="radio" name="gender" value="Male"/></label>Male
+                <label><input type="radio" name="gender" value="Female"/></label>Female
+            </td>
+        </tr>
+        <tr>
+            <td>Hobbies:</td>
+            <td>
+                <label><input type="checkbox" name="hobbies" value="Movies"/></label>Movies
+                <label><input type="checkbox" name="hobbies" value="Music"/></label>Music
+                <label><input type="checkbox" name="hobbies" value="Sports"/></label>Sports
+            </td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td>
+                <label>
+                    <select name="country">
+                        <option value="Deutschland">Deutschland</option>
+                        <option value="Poland">Poland</option>
+                        <option value="USA">USA</option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Languages:</td>
+            <td>
+                <label>
+                    <select name="languages" multiple="multiple">
+                        <option value="Deutsch">Deutsch</option>
+                        <option value="English">English</option>
+                        <option value="Polisch">Polisch</option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="Registration" name="registration"/>
+                <input type="reset" value="Clear" name="clear"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+</html>

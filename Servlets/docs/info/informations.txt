@@ -1,0 +1,62 @@
+
+Registration servlet requires registration.html
+Zamiana method="post" na method="get" oraz treści w doGet na doPost
+
+Włączenie i wyłączenie kompresji:
+http://localhost:8080/GzipServlet?disableGzip=true
+Weryfikacja w Chrome sekcja Network po odświeżeniu
+
+ContentTypeServlet generuje plik excel
+
+Zamiana z //@WebFilter("/LoginServlet") na @WebFilter("/AuthenticationFilter") aby dodać konfigurację
+w pliku web.xml
+
+Logowanie z filterm wymaga pilku login.html
+
+Zmiana w web.xml dla errorhandler
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/ErrorHandlerServlet</location>
+    </error-page>
+    <error-page>
+        <error-code>407</error-code>
+        <location>/ErrorHandlerServlet</location>
+    </error-page>
+    
+    
+Log:
+
+Dodanie poprzez Libraries 
+servlet-api.jar  dla metody z javax.servlet.http
+
+Dodanie poprzez z Tomcata Modules dodaj jary.
+log4j-api-2.12.1.jar
+log4j-core-2.12.1.jar
+
+Zapis do pliku poprzez Lister.
+
+Język:
+ResourceBundle resourceBundle;
+
+ArrayList<String> languages = new ArrayList<>();
+        languages.add("de");
+        languages.add("us");
+        languages.add("fr");
+        languages.add("pl");
+
+	if (languages.contains(language)) {
+             resourceBundle = ResourceBundle.getBundle("i18n.resourceBundle", request.getLocale());
+        } else {
+             resourceBundle = ResourceBundle.getBundle("i18n.resourceBundle", Locale.US);
+        }
+
+
+        if (Arrays.toString(Languages.values()).toLowerCase().contains(language)){
+            resourceBundle = ResourceBundle.getBundle("i18n.resourceBundle", request.getLocale());
+        } else {
+            resourceBundle = ResourceBundle.getBundle("i18n.resourceBundle", Locale.US);
+        }
+
+Cofnięcie commita w gicie: git reset --hard HEAD~1
+
