@@ -4,7 +4,7 @@
 
 ### Module "Technologia JSP i Servlety" for Software Development Academy
 
-#### GroupA: Simple examples
+#### Simple examples
 
 - [HelloWord](https://github.com/jszlenk/Java-Servlets/blob/master/Servlets/src/helloworld/HelloWorld.java)
 - [UserInfo](https://github.com/jszlenk/Java-Servlets/blob/master/Servlets/src/userinfo/UserInfo.java)
